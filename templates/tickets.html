@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    {% for tickets in Coll_Tickets $}
-    {{Coll_Tickets.Title}}
-    {{Coll_Tickets.Category}}
-    {{Coll_Tickets.Requested_By}}
-    {{Coll_Tickets.Priority}}
-    {{Coll_Tickets.Requested_By}}
-    {% end for %}
+    {% for ticket in tickets %}
+    {{ticket.Title}}
+    {{ticket.Category}}
+    {{ticket.Requested_By}}
+    {{ticket.Priority}}
+    {{ticket.Requested_By}}
+    {% endfor %}
 </body>
 </html>
