@@ -18,7 +18,7 @@ mongo = PyMongo(app)
 @app.route('/get_tickets')
 def get_tickets():
     return render_template("tickets.html", tickets=mongo.db.Coll_Tickets.find())
-    
+  
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
