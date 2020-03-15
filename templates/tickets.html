@@ -2,27 +2,20 @@
 {% block content %}
 
 
-    {% for ticket in tickets %}
-    {{ticket.Title}}
-    {{ticket.Category}}
-    {{ticket.Requested_By}}
-    {{ticket.Priority}}
-    {{ticket.Requested_By}}
-    {% endfor %}
+  <ul class="collapsible popout" data-collapsible="accordion">
+  {% for ticket in tickets %}
+    <li>
+      <div class="collapsible-header"><i class="material-icons">add</i>
+      <strong>{{ticket.Category}} - {{ticket.Title}}
+      </div>
 
-  <ul class="collapsible popout">
-    <li>
-      <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      <div class="collapsible-body">
+      <span>
+      {{ticket.Description}}
+      </span>
+      </div>
     </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
+   {% endfor %} 
   </ul>
 
 {% endblock %}
