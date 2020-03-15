@@ -12,6 +12,15 @@
 <body>
     <h1>template page</h1>
     {% block content %}
+    <nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">BT</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="newticket.html">Submit New Ticket</a></li>
+            </ul>
+    </div>
+    </nav>
     {% endblock %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -19,7 +28,12 @@
 <script type="text/javascript">
     $(document).ready(function(){
     $('.collapsible').collapsible();
-  });
+    });
+</script> 
+  <script type="text/javascript">
+  document.getElementById("matfix").addEventListener("click", function(e) {
+	e.stopPropagation();
+    });
 </script>  
    
 </body>

@@ -9,7 +9,7 @@ from bson.objectid import ObjectId
 
 app = Flask(__name__)
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
-app.config["MONGODB_NAME"] = os.environ.get("MONGODB_NAME") 
+app.config["MONGODB_NAME"] = os.environ.get("MONGODB_NAME" ,'mongodb://localhost') 
 
 mongo = PyMongo(app)
 
@@ -18,7 +18,10 @@ mongo = PyMongo(app)
 @app.route('/get_tickets')
 def get_tickets():
     return render_template("tickets.html", tickets=mongo.db.Coll_Tickets.find())
-  
+
+@app.route('/new_ticket')
+def new_ticket():
+    return render_template("newticket.html")
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
