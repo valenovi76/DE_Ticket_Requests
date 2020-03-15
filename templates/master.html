@@ -29,12 +29,15 @@
     $(document).ready(function(){
     $('.collapsible').collapsible();
     });
-</script> 
-  <script type="text/javascript">
-  document.getElementById("matfix").addEventListener("click", function(e) {
-	e.stopPropagation();
+
+    $(document).ready(function(){
+    $('.datepicker').datepicker();
     });
-</script>  
+    
+    $('#textarea1').val('New Text');
+    M.textareaAutoResize($('#textarea1'));
+</script> 
+   
    
 </body>
 </html>
