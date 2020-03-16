@@ -4,39 +4,50 @@
 
 <div class="row">
     <form action="" method "POST" class="col s12">
-      <div class="row">
+
+      <div class= "row">
         <div class="input-field col s12">
-          <i class="material-icons prefix">assignment</i>
-          <input id="icon_prefix" name="Title"type="text" class="validate">
-          <label for="icon_prefix">Ticket Request Titile</label>
-        </div>
-      </div>  
-      <div class="row">
-        <div class="input-field col s12">
-          <i class="material-icons prefix">perm_identity</i>
-          <input id="icon_requestor_name" name= "Requestor_Name" type="tel" class="validate">
-          <label for="icon_requestor_name">Requested By</label>
-        </div>
-      </div>  
-      </div>
-    </form>
-  </div>
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea id="textarea1" name ="Description" class="materialize-textarea"></textarea>
-          <label for="textarea1">Ticket Description</label>
+            <select>
+            <option value="" disabled selected>Choose your option</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+            </select>
+            <label>Materialize Select</label>
         </div>
       </div>
-    </form>
-  </div>
-  <div class="row">
+      <div class="row">
+                <div class="input-field col s12">
+                <i class="material-icons prefix">assignment</i>
+                <input id="icon_prefix" name="Title"type="text" class="validate">
+                <label for="icon_prefix">Ticket Request Titile</label>
+                </div>
+      </div> 
+
+      <div class="row">
+                    <div class="input-field col s12">
+                    <i class="material-icons prefix">perm_identity</i>
+                    <input id="icon_requestor_name" name= "Requestor_Name" type="tel" class="validate">
+                    <label for="icon_requestor_name">Requested By</label>
+                    </div>
+      </div> 
+      <div class="row">
+            <form class="col s12">
+            <div class="row">
+                <div class="input-field col s12">
+                <textarea id="textarea1" name ="Description" class="materialize-textarea"></textarea>
+                <label for="textarea1">Ticket Description</label>
+                </div>
+            </div>
+            </form>
+      </div>
+      <div class="row">
         <div class="input-field col s12">
           <i class="material-icons prefix">assignment</i>
           <input id="icon_Requested_By" name="Requested_By" type="text" class="datepicker">
           <label for="icon_prefix">Ticket Request By Date</label>
         </div>
       </div>  
-
+    </form>
+</div>    
 {% endblock %}

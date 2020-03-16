@@ -15,9 +15,9 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
-@app.route('/get_tickets')
-def get_tickets():
-    return render_template("tickets.html", tickets=mongo.db.Coll_Tickets.find())
+#@app.route('/get_tickets')
+#def get_tickets():
+#    return render_template("tickets.html", tickets=mongo.db.Coll_Tickets.find())
 
 @app.route('/new_ticket')
 def new_ticket():
